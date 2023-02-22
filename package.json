@@ -1,11 +1,11 @@
 {
-  "name": "@nimbus/painterro",
+  "name": "@ZetRC/painterro",
   "version": "1.2.79",
   "description": "HTML5 image editing widget (js paint plugin)",
   "main": "build/painterro.commonjs2.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/devforth/painterro"
+    "url": "https://github.com/ZetRC/painterro"
   },
   "scripts": {
     "prepare": "npm run build",
