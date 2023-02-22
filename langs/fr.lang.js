@@ -45,6 +45,7 @@ export default {
     crop: 'Recadrer l\'image dans la zone sélectionnée',
     pixelize: 'Pixéliser la zone sélectionnée',
     rect: 'Dessiner un rectangle',
+    triangle: 'Dessiner un triangle',
     ellipse: 'Dessiner une ellipse',
     line: 'Dessiner une ligne',
     arrow: 'Dessiner une flèche',

@@ -62,7 +62,8 @@ class PainterroProc {
         this.select.doPixelize();
         this.closeActiveTool();
       },
-    }, {
+    }, 
+    {
       name: 'line',
       hotkey: 'l',
       controls: [
@@ -84,7 +85,31 @@ class PainterroProc {
         this.primitiveTool.activate('line');
       },
       eventListner: () => this.primitiveTool,
-    }, {
+    },
+    {
+      name: 'triangle',
+      hotkey: 'o',
+      controls: [
+        () => ({
+          type: 'color',
+          title: 'lineColor',
+          target: 'line',
+          titleFull: 'lineColorFull',
+          action: () => {
+            this.colorPicker.open(this.colorWidgetState.line);
+          },
+        }),
+        () => this.controlBuilder.buildLineWidthControl(1),
+        () => this.controlBuilder.buildShadowOnControl(2),
+      ],
+      activate: () => {
+        if (this.initText) this.wrapper.click();
+        this.toolContainer.style.cursor = 'crosshair';
+        this.primitiveTool.activate('triangle');
+      },
+      eventListner: () => this.primitiveTool,
+    },
+    {
       name: 'arrow',
       hotkey: 'a',
       controls: [

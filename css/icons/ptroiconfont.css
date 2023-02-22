@@ -26,6 +26,16 @@ url("ptroiconfont.ttf?616c25507ea43347b0fb23f24760dae2") format("truetype");
 .ptro-icon-arrow:before {
 	content: "\f102";
 }
+
+.ptro-icon-triangle:before{
+	content:'';
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid white;
+}
+
 .ptro-icon-brush:before {
 	content: "\f103";
 }

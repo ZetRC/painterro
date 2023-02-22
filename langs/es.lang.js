@@ -41,6 +41,7 @@ export default {
     crop: 'Recortar imagen a la area seleccionada',
     pixelize: 'Pixelar la area seleccionada',
     rect: 'Dibujar rectángulo',
+    triangle: 'Dibujar triangulo',
     ellipse: 'Dibujar eclipse',
     line: 'Dibujar linea',
     rotate: 'Rotar imagen',
