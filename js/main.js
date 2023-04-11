@@ -110,6 +110,29 @@ class PainterroProc {
       eventListner: () => this.primitiveTool,
     },
     {
+      name: 'triangleType2',
+      hotkey: '',
+      controls: [
+        () => ({
+          type: 'color',
+          title: 'lineColor',
+          target: 'line',
+          titleFull: 'lineColorFull',
+          action: () => {
+            this.colorPicker.open(this.colorWidgetState.line);
+          },
+        }),
+        () => this.controlBuilder.buildLineWidthControl(1),
+        () => this.controlBuilder.buildShadowOnControl(2),
+      ],
+      activate: () => {
+        if (this.initText) this.wrapper.click();
+        this.toolContainer.style.cursor = 'crosshair';
+        this.primitiveTool.activate('triangleType2');
+      },
+      eventListner: () => this.primitiveTool,
+    },
+    {
       name: 'arrow',
       hotkey: 'a',
       controls: [
