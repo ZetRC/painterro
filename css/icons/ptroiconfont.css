@@ -31,6 +31,15 @@ url("ptroiconfont.ttf?616c25507ea43347b0fb23f24760dae2") format("truetype");
 	content:'';
 	width: 0; 
 	height: 0; 
+	border-left: 0px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid white;
+}
+
+.ptro-icon-triangleType2:before{
+	content:'';
+	width: 0; 
+	height: 0; 
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
 	border-bottom: 10px solid white;
