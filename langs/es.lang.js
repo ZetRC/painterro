@@ -46,7 +46,7 @@ export default {
     ellipse: 'Dibujar eclipse',
     line: 'Dibujar linea',
     rotate: 'Rotar imagen',
-    save: 'Guardar imagen',
+    save: 'Guardar imagen(El dibujo se guardará en la carpeta que tengas por default de descarga)',
     load: 'Cargar imagen',
     text: 'Escribir texto',
     brush: 'Pincel',

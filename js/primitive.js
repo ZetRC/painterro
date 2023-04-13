@@ -162,7 +162,7 @@ export default class PrimitiveTool {
         ctx.closePath();
         const origShadowColor = ctx.shadowColor;
         if (this.shadowOn) {
-          ctx.shadowColor = 'rgba(0,0,0,0)';
+          ctx.shadowColor = 'rgba(0,0,0,.5)';
           ctx.shadowBlur = this.lineWidth;
           ctx.shadowOffsetX = this.lineWidth / 2.0;
           ctx.shadowOffsetY = this.lineWidth / 2.0;
@@ -237,7 +237,7 @@ export default class PrimitiveTool {
         ctx.closePath();
         const origShadowColor = ctx.shadowColor;
         if (this.shadowOn) {
-          ctx.shadowColor = 'rgba(0,0,0,0)';
+          ctx.shadowColor = 'rgba(0,0,0,.5)';
           ctx.shadowBlur = Math.log(r) * this.main.params.shadowScale;
           ctx.shadowOffsetX = Math.log10(r);
           ctx.shadowOffsetY = Math.log10(r);
@@ -279,7 +279,7 @@ export default class PrimitiveTool {
 
         const origShadowColor = ctx.shadowColor;
         if (this.shadowOn) {
-          ctx.shadowColor = 'rgba(0,0,0,0)';
+          ctx.shadowColor = 'rgba(0,0,0,.5)';
           ctx.shadowBlur = this.lineWidth;
           ctx.shadowOffsetX = this.lineWidth / 2.0;
           ctx.shadowOffsetY = this.lineWidth / 2.0;
@@ -332,7 +332,7 @@ export default class PrimitiveTool {
         this.ctx.fill();
         const origShadowColor = ctx.shadowColor;
         if (this.shadowOn) {
-          ctx.shadowColor = 'rgba(0,0,0,0)';
+          ctx.shadowColor = 'rgba(0,0,0,.5)';
           ctx.shadowBlur = this.lineWidth;
           ctx.shadowOffsetX = this.lineWidth / 2.0;
           ctx.shadowOffsetY = this.lineWidth / 2.0;
@@ -365,7 +365,7 @@ export default class PrimitiveTool {
         ctx.closePath();
         const origShadowColor = ctx.shadowColor;
         if (this.shadowOn) {
-          ctx.shadowColor = 'rgba(0,0,0,0)';
+          ctx.shadowColor = 'rgba(0,0,0,.5)';
           ctx.shadowBlur = this.lineWidth;
           ctx.shadowOffsetX = this.lineWidth / 2.0;
           ctx.shadowOffsetY = this.lineWidth / 2.0;
@@ -391,13 +391,14 @@ export default class PrimitiveTool {
           }
         }
         ctx.beginPath();
-        ctx.moveTo(this.centerCord[0], this.centerCord[1]);
+        ctx.moveTo(this.centerCord[0], this.curCord[1]);
         ctx.lineTo(this.curCord[0], this.curCord[1]);
-        ctx.lineTo(this.centerCord[0]/2, this.curCord[1]);
+        ctx.lineTo(this.centerCord[0] + ((this.curCord[0] - this.centerCord[0]) / 2), this.centerCord[1]);
+        
         ctx.closePath();
         const origShadowColor = ctx.shadowColor;
         if (this.shadowOn) {
-          /* ctx.shadowColor = 'rgba(0,0,0,0)'; */
+          /* ctx.shadowColor = 'rgba(0,0,0,.5)'; */
           ctx.shadowColor = 'rgba(0,0,0,0.4)';
           ctx.shadowBlur = this.lineWidth;
           ctx.shadowOffsetX = this.lineWidth / 2.0;
